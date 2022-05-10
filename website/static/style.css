@@ -1,0 +1,22 @@
+.nav-bar {
+    background: #e86824;
+}
+
+.body {
+    font-family: 'Quicksand';
+}
+
+.nav-buttons {
+    color: white;
+    background: black;
+}
+
+a {
+    color: white;
+}
+
+a:hover { color: #e86824; }
+
+h3 {
+    font-size: 24px;
+}
