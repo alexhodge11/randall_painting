@@ -1,3 +1,16 @@
+* {
+    box-sizing: border-box
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+.body {
+    background: lightgray;
+}
+
 .nav-bar {
     background: #e86824;
 }
@@ -11,12 +24,257 @@
     background: black;
 }
 
-a {
+.nav-bar a {
     color: white;
 }
 
-a:hover { color: #e86824; }
+.nav-bar a:hover { 
+    color: #e86824; 
+}
 
 h3 {
     font-size: 24px;
+}
+
+.service-block {
+    color: #e86824;
+    border: solid black 4px;
+    background-color: black;
+    border-radius: 20px;
+}
+
+.service-block img {
+    width: 40%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.bottom-nav a {
+    color: black;
+}
+
+.bottom-nav a:hover {
+    color: #e86824;
+}
+
+.about-block {
+    color: #e86824;
+    border: solid black 4px;
+    background-color: black;
+    border-radius: 20px;
+}
+
+.email-form {
+    border: solid #e86824 4px;
+    border-radius: 20px;
+}
+
+.email-form textarea {
+    width: 75%;
+    height: 120px;
+}
+
+.left-about-block {
+    border: solid #e86824 4px;
+    border-radius: 20px;
+}
+
+.about-block img {
+    width: 75%;
+    height: auto;
+}
+
+.dashboard-items h1 {
+    color: white;
+    font-size: 36px;
+    width: 75%;
+    border: solid black 4px;
+    background: black;
+    padding: 1%;
+    border-radius: 20px;
+}
+
+.dashboard-items a:hover {
+    color:#e86824;
+    border: solid #e86824 4px;
+}
+
+.dashboard-items h1:hover {
+    color:#e86824;
+    border: solid #e86824 4px;
+    }
+
+.project img {
+    width: 20%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.selected-project img {
+    width: 90%;
+    height: auto;
+    border-radius: 20px;
+    border: black solid 3px;
+}
+
+.edit-display textarea {
+    border-radius: 20px;
+}
+
+.project {
+    border: black solid 4px;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+}
+
+.project:hover {
+    border: white solid 4px;
+}
+
+.project a {
+    color:#e86824;
+}
+
+.project a:hover {
+    color:white;
+}
+
+.selected-project {
+    background: #e86824;
+    color: white;
+    border: black solid 4px;
+    border-radius: 20px;
+}
+
+.selected-project textarea {
+    width: 90%;
+    height: 150px;
+    background-color: lightgray;
+}
+
+.edit-display {
+    height: auto;
+}
+
+.uploaded-projects {
+    overflow-y: scroll;
+    max-height: 480px;
+    background-color: #e86824;
+    border-radius: 20px;
+    border: black solid 4px;
+}
+
+.uploaded-projects::-webkit-scrollbar {
+    width: 4px;
+}
+
+.uploaded-projects::-webkit-scrollbar-track {
+background: black;
+}
+
+.uploaded-projects::-webkit-scrollbar-thumb {
+background: white;
+}
+
+.uploaded-projects::-webkit-scrollbar-thumb:hover {
+background: lightgray;
+}
+
+.about-block img {
+    max-height: auto;
+    width: 40%;
+    border-radius: 20px;
+}
+
+.edit-about-block img {
+    max-height: auto;
+    width: 35%;
+    border-radius: 20px;
+    border:black solid 4px;;
+}
+
+.company-info textarea {
+    height: 140px;
+    width: 75%;
+    border-radius: 20px;
+    background-color: lightgray;
+}
+
+.profile-info textarea {
+    height: 142px;
+    width: 75%;
+    border-radius: 20px;
+    background-color: lightgray;
+}
+
+.profile-info {
+    border:black solid 4px;
+    border-radius: 20px;
+}
+
+.company-info {
+    border: solid black 4px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.add-admin {
+    width: 30%;
+    border: black solid 4px;
+    border-radius: 20px;;
+}
+
+.manage-admin {
+    width: 30%;
+    border: black solid 4px;
+    border-radius: 20px;;
+}
+
+.current-admins {
+    width: 60%;
+    border: black solid 4px;
+    border-radius: 20px;
+    color: white;
+    background-color: #e86824;
+    max-height: 400px;
+    overflow-y: scroll;
+}
+
+.current-admins::-webkit-scrollbar {
+    width: 4px;
+}
+
+.current-admins::-webkit-scrollbar-track {
+background: black;
+}
+
+.current-admins::-webkit-scrollbar-thumb {
+background: white;
+}
+
+.current-admins::-webkit-scrollbar-thumb:hover {
+background: lightgray;
+}
+
+.current-admins h3 {
+    color: black
+}
+
+.current-admins a {
+    color:#e86824;
+}
+
+.current-admins a:hover {
+    color:white
+}
+
+.admin-user {
+    background: black;
+    border-radius: 20px;
+    border: black solid 4px;
+}
+
+.admin-user:hover {
+    border: white solid 4px;
 }

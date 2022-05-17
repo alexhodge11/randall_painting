@@ -1,25 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <meta charset="utf-8" />  
     <link rel="stylesheet" href="/static/style.css">
-    <title>Randall Painting</title>
-</head>
+    <script src="/static/script.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="icon" href="/static/tab_logo.png">
+    <title>Our Projects</title>        
+</head>  
 <body>
-    <div class="nav-bar text-center w-100">
-        <img class="logo img-fluid" src="/static/randalllogo.jpg" alt="Randall Logo">
-        <div class="nav-buttons w-100 navbar navbar-brand d-flex justify-content-around">
-            <h3><a href="/services">SERVICES WE OFFER</a></h3>
-            <h3><a href="/projects">OUR PROJECTS</a></h3>
-            <h3><a href="/about">ABOUT US</a></h3>
-            <h3><a href="/contact">CONTACT US</a></h3>
+    <div class="projects-wrapper">
+        <div class="nav-bar text-center w-100">
+            <img class="logo img-fluid" src="/static/randalllogo.jpg" alt="Randall Logo">
+            <div class="nav-buttons w-100 navbar navbar-brand d-flex justify-content-around">
+                <h3><a href="/services">SERVICES WE OFFER</a></h3>
+                <h3><a href="/projects">OUR PROJECTS</a></h3>
+                <h3><a href="/about">ABOUT US</a></h3>
+                <h3><a href="/contact">CONTACT US</a></h3>
+            </div>
+        </div>
+        <h1 class="text-center m-5 font-weight-bold">OUR PROJECTS</h1>
+        <div id="carouselExampleCrossfade" class="carousel slide carousel-fade" data-mdb-ride="carousel">
+            <div class="carousel-indicators">
+            <button type="button" data-mdb-target="#carouselExampleCrossfade" data-mdb-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-mdb-target="#carouselExampleCrossfade" data-mdb-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-mdb-target="#carouselExampleCrossfade" data-mdb-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <img src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp" class="d-block w-100" alt="Wild Landscape"/>
+                </div>
+                <div class="carousel-item">
+                <img src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp" class="d-block w-100" alt="Camera"/>
+                </div>
+                <div class="carousel-item">
+                <img src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp" class="d-block w-100" alt="Exotic Fruits"/>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleCrossfade" data-mdb-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-mdb-target="#carouselExampleCrossfade" data-mdb-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            </div>
+        <div class="bottom-nav d-flex justify-content-around m-5 mx-auto w-75">
+            <h4><a href="/about">About Us</a></h4>
+            <h4><a href="/contact">Contact Us</a></h4>
+            <h4><a href="/admin-login">Admin Login</a></h4>
+            <h4><a href="/dashboard">Dashboard</a></h4>
         </div>
     </div>
-    <div class="text-center">
-        <h1>PROJECTS</h1>
-    </div>
-</body>
-</html>
+</body>  
+</html> 
