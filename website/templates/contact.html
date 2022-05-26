@@ -9,14 +9,17 @@
         <title>Contact Us</title>        
     </head> 
 <body>
-    <div class="contact-wrapper">
+    <div class="wrapper">
         <div class="nav-bar text-center w-100">
-            <img class="logo img-fluid" src="/static/randalllogo.jpg" alt="Randall Logo">
+            <h1 class="text-center mx-auto p-2">RANDALL PAINTING</h1>
             <div class="nav-buttons w-100 navbar navbar-brand d-flex justify-content-around">
                 <h3><a href="/services">SERVICES WE OFFER</a></h3>
                 <h3><a href="/projects">OUR PROJECTS</a></h3>
                 <h3><a href="/about">ABOUT US</a></h3>
                 <h3><a href="/contact">CONTACT US</a></h3>
+                {% if request.session.user %}
+                <h3><a href="/logout">LOGOUT</a></h3>
+                {% endif %}
             </div>
         </div>
         <h1 class="text-center m-5 font-weight-bold">CONTACT US</h1>
@@ -52,7 +55,9 @@
             <h4><a href="/about">About Us</a></h4>
             <h4><a href="/contact">Contact Us</a></h4>
             <h4><a href="/admin-login">Admin Login</a></h4>
+            {% if request.session.user %}
             <h4><a href="/dashboard">Dashboard</a></h4>
+            {% endif %}
         </div>
     </div>
 </body>

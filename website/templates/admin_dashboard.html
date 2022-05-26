@@ -7,24 +7,26 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="icon" href="/static/tab_logo.png">
         <title>Dashboard</title>        
-    </head> 
+    </head>
 <body>
-    <div class="dashboard-wrapper text-center">
+    <div class="wrapper text-center w-100">
         <div class="nav-bar text-center w-100">
-            <img class="logo img-fluid" src="/static/randalllogo.jpg" alt="Randall Logo">
+            <h1 class="text-center mx-auto p-2">RANDALL PAINTING</h1>
             <div class="nav-buttons w-100 navbar navbar-brand d-flex justify-content-around">
                 <h3><a href="/dashboard">ADMIN DASHBOARD</a></h3>
-                <h3><a href="/dashboard">LOGOUT</a></h3>
+                <h3><a href="/logout">LOGOUT</a></h3>
             </div>
         </div>
-        <div class="dashboard-items mx-auto m-5">
-            <a href="/services"><h1 class="text-center mx-auto m-3">VIEW WEBSITE</h1></a>
-            <a href="/services"><h1 class="text-center mx-auto m-3">INVOICING</h1></a>
-            <a href="/edit-projects"><h1 class="text-center mx-auto m-3">ADD/EDIT PROJECTS DISPLAY PAGE</h1></a>
-            <a href="/services"><h1 class="text-center mx-auto m-3">ADD/EDIT CUSTOMER INFORMATION</h1></a>
-            <a href="/services"><h1 class="text-center mx-auto m-3">SEARCH CUSTOMER INFORMATION</h1></a>
-            <a href="/edit-about-us"><h1 class="text-center mx-auto m-3">EDIT "ABOUT US" DISPLAY PAGE</h1></a>
-            <a href="/manage-admins"><h1 class="text-center mx-auto m-3">ADD/MANAGE ADMIN USERS</h1></a>
+        <div class="dashboard-items mx-auto mt-5 mb-5 w-75">
+            <a href="/services"><h1 class="text-center mx-auto mt-3 mb-3">VIEW WEBSITE</h1></a>
+            <a href="/customer-hub"><h1 class="text-center mx-auto mt-3 mb-3">CUSTOMER HUB & INVOICING</h1></a>
+            <!-- <a href="/edit-services"><h1 class="text-center mx-auto mt-3 mb-3">EDIT "OUR SERVICES" PAGE</h1></a> -->
+            <a href="/manage-projects"><h1 class="text-center mx-auto mt-3 mb-3">MANAGE PROJECTS PAGE</h1></a>
+            <a href="/edit-about-us"><h1 class="text-center mx-auto mt-3 mb-3">EDIT "ABOUT US" DISPLAY PAGE</h1></a>
+            <!-- <a href="/edit-contact"><h1 class="text-center mx-auto mt-3 mb-3">EDIT "CONTACT US" DISPLAY PAGE</h1></a> -->
+            {% if request.session.exec_control %}
+            <a href="/manage-admins"><h1 class="text-center mx-auto mt-3 mb-3">MANAGE ADMIN USERS</h1></a>
+            {% endif %}
         </div>
     </div>   
 </body>

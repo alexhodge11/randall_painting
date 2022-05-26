@@ -9,32 +9,37 @@
         <title>Edit "About Us"</title>        
     </head> 
 <body>
-    <div class="edit-about-wrapper text-center">
+    <div class="wrapper text-center">
         <div class="nav-bar text-center w-100">
-            <img class="logo img-fluid" src="/static/randalllogo.jpg" alt="Randall Logo">
+            <h1 class="text-center mx-auto p-2">RANDALL PAINTING</h1>
             <div class="nav-buttons w-100 navbar navbar-brand d-flex justify-content-around">
                 <h3><a href="/dashboard">ADMIN DASHBOARD</a></h3>
-                <h3><a href="/dashboard">LOGOUT</a></h3>
+                <h3><a href="/logout">LOGOUT</a></h3>
             </div>
         </div>
         <h1 class="m-3">Edit "About Us" Page</h1>
         <div class="edit-about-block">
-            <form action="">
+            <form action="/update-about/" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
                 <div class="w-75 d-flex mx-auto text-center align-items-start">
                     <div class="profile-info w-50 m-4">
-                        <img src="/static/randall_profile.jpeg" alt="profile" class="img-fluid form-group m-3">
+                        <img src="/media/{{ about.profile_pic }}" alt="profile" class="img-fluid form-group m-3" for="profile_pic">
                         <br>
-                        <input type="file" class="form-group">
-                        <textarea class="form-group text-center"></textarea>
+                        <input type="file" class="form-group" name="profile_pic">
+                        <textarea class="form-group text-center" name="profile_description">{{ about.profile_description }}</textarea>
                     </div>
                     <div class="company-info w-50 text-center m-4">
                         <div class="m-3">
-                            <h3 class="m-3"><label>COMPANY MOTTO</label></h3>
-                            <h4><textarea class="text-center"></textarea></h4>
+                            <h3 class="m-3"><label for="motto">COMPANY MOTTO</label></h3>
+                            <h4><textarea class="text-center" name="motto">{{ about.motto }}</textarea></h4>
+                        </div>
+                        <div class="m-3">
+                            <h3 class="m-3"><label for="co_description_header">COMPANY DESCRIPTION HEADER</label></h3>
+                            <h4><textarea class="text-center" name="co_description_header">{{ about.co_description_header }}</textarea></h4>
                         </div>
                         <div class="m-4">
-                            <h3 class="m-4"><label>COMPANY DESCRIPTION</label></h3>
-                            <textarea class="text-center"></textarea>
+                            <h3 class="m-4"><label for="co_description">COMPANY DESCRIPTION</label></h3>
+                            <textarea class="text-center" name="co_description">{{ about.co_description }}</textarea>
                         </div>
                     </div>
                 </div>
@@ -42,7 +47,6 @@
                     <h3><input type="submit" value="Update About Us Information" class="m-3 mx-auto text-center"></h3>
                 </div>
             </form>
-
         </div>
     </div>
 </body>

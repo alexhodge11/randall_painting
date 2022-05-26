@@ -1,18 +1,29 @@
 * {
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
-.logo img {
-    width: 100%;
-    height: auto;
+html {
+
 }
 
-.body {
-    background: lightgray;
+body {
+    background-color: lightgray !important;
+}
+
+.wrapper {
+
 }
 
 .nav-bar {
     background: #e86824;
+}
+
+.nav-bar h1 {
+    font-size: 75px;
+    background-color: black;
+    color:#e86824;
+    letter-spacing: 8px;
+    font-weight: bolder;
 }
 
 .body {
@@ -20,16 +31,20 @@
 }
 
 .nav-buttons {
-    color: white;
     background: black;
 }
 
 .nav-bar a {
-    color: white;
+    color: lightgray;
 }
 
 .nav-bar a:hover { 
     color: #e86824; 
+}
+
+.services-wrapper p {
+    font-size: 18px;
+    font-style: bold;
 }
 
 h3 {
@@ -41,6 +56,11 @@ h3 {
     border: solid black 4px;
     background-color: black;
     border-radius: 20px;
+}
+
+.service-info h2 {
+    font-size: 50px;
+    font-weight: bolder;
 }
 
 .service-block img {
@@ -87,7 +107,7 @@ h3 {
 .dashboard-items h1 {
     color: white;
     font-size: 36px;
-    width: 75%;
+    width: 100%;
     border: solid black 4px;
     background: black;
     padding: 1%;
@@ -277,4 +297,91 @@ background: lightgray;
 
 .admin-user:hover {
     border: white solid 4px;
+}
+
+.customer-list {
+    overflow-y: scroll;
+    max-height: 550px;
+    background-color: #e86824;
+    border-radius: 20px;
+    border: black solid 4px;
+}
+
+.customer-list::-webkit-scrollbar {
+    width: 4px;
+}
+
+.customer-list::-webkit-scrollbar-track {
+background: black;
+}
+
+.customer-list::-webkit-scrollbar-thumb {
+background: white;
+}
+
+.customer-list::-webkit-scrollbar-thumb:hover {
+background: lightgray;
+}
+
+.customer {
+    border: black solid 4px;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+}
+
+.customer a {
+    color:#e86824;
+}
+
+.customer a:hover {
+    color:white;
+}
+
+.customer:hover {
+    border-color: white
+}
+
+.selected-customer {
+    height: 550px;
+    background: #e86824;
+    color: white;
+    border: black solid 4px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.customer-form {
+    background-color: black;
+    border: black solid 4px;
+    border-radius: 20px;
+}
+
+.customer-form input {
+    border-radius: 20px;
+}
+
+.customer-display hr {
+    background-color: white;
+}
+
+.customer-display {
+    width: 75%;
+}
+
+.invoice-wrapper {
+    border: solid black 4px;
+    border-radius: 20px;
+}
+
+.cost-input hr {
+    background-color: black
+}
+
+.cost-input {
+    border: black solid 4px;
+    border-radius: 20px;
 }

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>  
+        <meta charset="utf-8" />  
+        <link rel="stylesheet" href="/static/style.css">
+        <script src="/static/script.js" defer></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="icon" href="/static/tab_logo.png">
+        <title>Customer Hub</title>        
+    </head> 
+<body class="">
+    <div class="wrapper text-center">
+        <div class="nav-bar text-center w-100">
+            <h1 class="text-center mx-auto p-2">RANDALL PAINTING</h1>
+            <div class="nav-buttons w-100 navbar navbar-brand d-flex justify-content-around">
+                <h3><a href="/dashboard">ADMIN DASHBOARD</a></h3>
+                <h3><a href="/logout">LOGOUT</a></h3>
+            </div>
+        </div>
+        <h1 class="m-3 w-75 mx-auto">Customer Hub</h1>
+        <div class="d-flex w-75 m-auto justify-content-between align-items-center">
+            <h3 class="text-left text-center w-25">Add Customer</h3>
+            <div class="customer-search text-right mr-5">
+                <label for="" class="">Search</label>
+                <input type="text">
+            </div>
+        </div>
+        <div class="customer-display d-flex text-center m-3 mx-auto">
+            <div class="selected-customer w-25 mx-auto m-3">
+                <form action="/add-customer/" class="customer-form text-left m-3" method="POST">
+                    {% csrf_token %}
+                    <div class="m-3 d-flex justify-content-between">
+                        <label for="first_name">First Name: </label>
+                        <input type="text" class="text-center" name="first_name">
+                    </div>
+                    <div class="m-3 d-flex justify-content-between">
+                        <label for="last_name">Last Name: </label>
+                        <input type="text" class="text-center" name="last_name">
+                    </div>
+                    <div class="m-3 d-flex justify-content-between">
+                        <label for="phone">Phone: </label>
+                        <input type="tel" class="text-center" name="phone">
+                    </div>
+                    <div class="m-3 d-flex justify-content-between">
+                        <label for="email">Email: </label>
+                        <input type="email" class="text-center" name="email">
+                    </div>
+                    <div class="m-3 d-flex justify-content-between">
+                        <label for="business_name">Business: </label>
+                        <input type="text" class="text-center" name="business_name">
+                    </div>
+                    <div class="m-3 d-flex justify-content-between">
+                        <label for="address">Address: </label>
+                        <input type="text" class="text-center" name="address">
+                    </div>
+                    <div class="m-3 d-flex justify-content-between">
+                        <label for="city">City: </label>
+                        <input type="text" class="text-center" name="city">
+                    </div>
+                    <div class="m-3 d-flex justify-content-between">
+                        <label for="state">State: </label>
+                        <select name="state">
+                            <option value="Iowa">IA</option>
+                            <option value="New York">NY</option>
+                        </select>
+                    </div>
+                    <div class="m-3 d-flex justify-content-between">
+                        <label for="zip_code">ZIP: </label>
+                        <input type="text" class="text-center" name="zip_code">
+                    </div>
+                    <div class="m-3 d-flex justify-content-between">
+                        <input type="submit" value="Add Customer" class="m-1">
+                    </div>
+                </form>
+            </div>
+            <div class="customer-list w-75 m-3 p-1">
+                {% for customer in customers %}
+                <div class="customer d-flex align-items-center justify-content-around p-2 m-2">
+                    <input type="hidden" name="id" value="{{ customer.id }}">
+                    <div>
+                        <p>Name:  {{ customer.first_name }} {{ customer.last_name }}</p>
+                        <p>Phone Number: {{ customer.phone }}</p>
+                        <p>Email Address: {{ customer.email }}</p>
+                    </div>
+                    <div class="text-left">
+                        <p>Business Name: {{ customer.business_name }}</p>
+                        <p>Address: {{ customer.address }}</p>
+                        <div class="d-flex">
+                            <p class="mr-2">City: {{ customer.city }}</p>
+                            <p class="mr-2">State: {{ customer.state }}</p>
+                            <p class="mr-2">ZIP: {{ customer.zip_code }}</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h5><a href="/">VIEW INVOICES</a></h5>
+                        <h5><a href="/create-invoice/{{ customer.id }}">CREATE INVOICE</a></h5>
+                        <hr>
+                        <h5><a href="/edit-customer/{{ customer.id }}">EDIT</a></h5>
+                        <h5><a href="/delete-customer/{{ customer.id }}">DELETE</a></h5>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>   
+</body>
+</html>

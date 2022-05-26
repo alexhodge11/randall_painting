@@ -9,32 +9,37 @@
         <title>About Us</title>        
     </head> 
 <body>
-    <div class="about-wrapper">
+    <div class="wrapper">
         <div class="nav-bar text-center w-100">
-            <img class="logo img-fluid" src="/static/randalllogo.jpg" alt="Randall Logo">
+            <h1 class="text-center mx-auto p-2">RANDALL PAINTING</h1>
             <div class="nav-buttons w-100 navbar navbar-brand d-flex justify-content-around">
                 <h3><a href="/services">SERVICES WE OFFER</a></h3>
                 <h3><a href="/projects">OUR PROJECTS</a></h3>
                 <h3><a href="/about">ABOUT US</a></h3>
                 <h3><a href="/contact">CONTACT US</a></h3>
+                {% if request.session.user %}
+                <h3><a href="/logout">LOGOUT</a></h3>
+                {% endif %}
             </div>
         </div>
-        <h1 class="text-center m-5 font-weight-bold">ABOUT US</h1>
+        <h1 class="text-center m-5 font-weight-bold">{{ about.motto }}</h1>
         <div class="about-block d-flex w-75 mx-auto text-center align-items-center">
             <div class="left-about-block w-50 m-2">
-                <img src="/static/randall_profile.jpeg" alt="profile-pic" class="m-3 img-fluid">
-                <p class="m-2">Self Description - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vehicula sem non pharetra tincidunt. Morbi efficitur a odio vel sollicitudin. Nunc semper sem vel aliquam mollis. Maecenas ullamcorper neque et nibh vehicula, vel sagittis lectus egestas. Aliquam eleifend augue vel vestibulum egestas.</p>
+                <img src="/media/{{ about.profile_pic }}" alt="profile-pic" class="m-3 img-fluid">
+                <p class="m-2">{{ about.profile_description }}</p>
             </div>
             <div class="right-about-block w-50 m-5">
-                <h1 class="m-2">Company Motto</h1>
-                <p>Company Description - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vehicula sem non pharetra tincidunt. Morbi efficitur a odio vel sollicitudin. Nunc semper sem vel aliquam mollis. Maecenas ullamcorper neque et nibh vehicula, vel sagittis lectus egestas. Aliquam eleifend augue vel vestibulum egestas.</p>
+                <h1 class="m-2">{{ about.co_description_header }}</h1>
+                <p>{{ about.co_description }}</p>
             </div>
         </div>
         <div class="bottom-nav d-flex justify-content-around m-5 mx-auto w-75">
             <h4><a href="/about">About Us</a></h4>
             <h4><a href="/contact">Contact Us</a></h4>
             <h4><a href="/admin-login">Admin Login</a></h4>
+            {% if request.session.user %}
             <h4><a href="/dashboard">Dashboard</a></h4>
+            {% endif %}
         </div>
     </div>
 </body>
