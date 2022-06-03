@@ -15,22 +15,22 @@
             <div class="nav-buttons w-100 navbar navbar-brand d-flex justify-content-around">
                 <h3><a href="/services">SERVICES WE OFFER</a></h3>
                 <h3><a href="/projects">OUR PROJECTS</a></h3>
-                <h3><a href="/about">ABOUT US</a></h3>
+                <h3 class="page-highlight"><a href="/about">ABOUT US</a></h3>
                 <h3><a href="/contact">CONTACT US</a></h3>
                 {% if request.session.user %}
                 <h3><a href="/logout">LOGOUT</a></h3>
                 {% endif %}
             </div>
         </div>
-        <h1 class="text-center m-5 font-weight-bold">{{ about.motto }}</h1>
+        <h1 class="page-title text-center m-5 font-weight-bold">{{ about.motto }}</h1>
         <div class="about-block d-flex w-75 mx-auto text-center align-items-center">
             <div class="left-about-block w-50 m-2">
                 <img src="/media/{{ about.profile_pic }}" alt="profile-pic" class="m-3 img-fluid">
-                <p class="m-2">{{ about.profile_description }}</p>
+                <h4 class="m-4">{{ about.profile_description }}</h4>
             </div>
             <div class="right-about-block w-50 m-5">
-                <h1 class="m-2">{{ about.co_description_header }}</h1>
-                <p>{{ about.co_description }}</p>
+                <h2 class="m-3">{{ about.co_description_header }}</h2>
+                <h4 class="co-description m-5">{{ about.co_description }}</h4>
             </div>
         </div>
         <div class="bottom-nav d-flex justify-content-around m-5 mx-auto w-75">

@@ -1,10 +1,10 @@
 function calculateTotal()
   {
-  let tax_percent = 1.24
+  let tax_percent = 1.27
 
   let total = tax_percent * (parseFloat($("#labor_cost").val()?$("#labor_cost").val():"0") + parseFloat($("#supplies_cost").val()?$("#supplies_cost").val():"0"));
 
-  let tax_total = 0.24 * total;
+  let tax_total = 0.27 * (parseFloat($("#labor_cost").val()?$("#labor_cost").val():"0") + parseFloat($("#supplies_cost").val()?$("#supplies_cost").val():"0"));
 
   $("#grand_total").text(format_currency(total));
 

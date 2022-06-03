@@ -43,23 +43,35 @@
                 </div>
             </div>
             <div class="cost-input w-50 m-5 p-3">
-                <form action="">
+                <form action="/generate-invoice/{{ customer.id }}" method="POST">
+                    {% csrf_token %}
+                    <input type="hidden" name="id" value="{{ customer.id }}">
+                    <input type="hidden" name="customer_id" value="{{ customer.id }}">
+                    <input type="hidden" name="first_name" value="{{ customer.first_name }}">
+                    <input type="hidden" name="last_name" value="{{ customer.last_name }}">
+                    <input type="hidden" name="phone" value="{{ customer.phone }}">
+                    <input type="hidden" name="email" value="{{ customer.email }}">
+                    <input type="hidden" name="business_name" value="{{ customer.business_name }}">
+                    <input type="hidden" name="address" value="{{ customer.address }}">
+                    <input type="hidden" name="city" value="{{ customer.city }}">
+                    <input type="hidden" name="state" value="{{ customer.state }}">
+                    <input type="hidden" name="zip_code" value="{{ customer.zip_code }}">
                     <div class="d-flex align-items-center justify-content-between w-75">
                         <label for="labor_cost"><h5>Labor Cost:</h5></label> 
-                        <input class="cost ml-2" type="text" id="labor_cost">
+                        <input class="cost ml-2" type="text" id="labor_cost" name="labor_cost">
                     </div>
                     <div class="d-flex align-items-center justify-content-between w-75">
                         <label for="supplies_cost"><h5>Supplies Cost:</h5></label>
-                        <input class="cost ml-2" type="text" id="supplies_cost"/>
+                        <input class="cost ml-2" type="text" id="supplies_cost" name="supplies_cost">
                     </div>
                     <div class="d-flex align-items-center justify-content-between w-50">
                         <h5>Tax: </h5>
-                        <h5 id="tax">0</h5>
+                        <h5 id="tax" name="tax">0</h5>
                     </div>
                     <hr>
                     <div class="d-flex align-items-center justify-content-between w-75">
                         <h3>GRAND TOTAL:</h3>
-                        <h3 id="grand_total">0</h3>
+                        <label for="grand_total"><h3 id="grand_total" for="grand_total">0</h3></label>
                     </div>
                     <input type="submit" value="Generate Invoice">
                 </form>

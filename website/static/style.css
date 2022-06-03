@@ -2,16 +2,29 @@
     box-sizing: border-box;
 }
 
-html {
-
-}
-
 body {
     background-color: lightgray !important;
 }
 
-.wrapper {
+.randall-painting-header a{
+    color:#e86824 !important;
+}
 
+.randall-painting-header a:hover {
+    text-decoration: none;
+}
+
+.submit-button {
+    border: solid black 4px;
+    background-color: #e86824;
+    color: black;
+    font-weight: bolder;
+    font-size: 24px;
+}
+
+.submit-button:hover {
+    color: lightgray;
+    border: solid lightgray 4px;
 }
 
 .nav-bar {
@@ -23,6 +36,11 @@ body {
     background-color: black;
     color:#e86824;
     letter-spacing: 8px;
+    font-weight: bolder;
+}
+
+.page-highlight a {
+    color:#e86824 !important;
     font-weight: bolder;
 }
 
@@ -47,15 +65,36 @@ body {
     font-style: bold;
 }
 
+.page-title {
+    font-size: 50px;
+}
+
 h3 {
     font-size: 24px;
 }
 
 .service-block {
     color: #e86824;
-    border: solid black 4px;
+    border: solid #e86824 4px;
+    border-radius: 20px;
     background-color: black;
     border-radius: 20px;
+}
+
+.contact-label {
+    color: lightgray;
+}
+
+.go-back a {
+    color: black;
+}
+
+.service-block p {
+    color: lightgray;
+}
+
+.service-info {
+
 }
 
 .service-info h2 {
@@ -79,14 +118,33 @@ h3 {
 
 .about-block {
     color: #e86824;
-    border: solid black 4px;
+    border: solid #e86824 4px;
     background-color: black;
     border-radius: 20px;
 }
 
 .email-form {
+
+}
+
+.admin-name {
+    color: lightgray;
+}
+
+.admin-info {
+    
+}
+
+.admin-info-block {
+    padding: 0 0;
+    margin: 10% 0;
+}
+
+.admin-login-form {
+    color: lightgray;
     border: solid #e86824 4px;
-    border-radius: 20px;
+    border-radius: 20px;;
+    background-color: black;
 }
 
 .email-form textarea {
@@ -95,8 +153,7 @@ h3 {
 }
 
 .left-about-block {
-    border: solid #e86824 4px;
-    border-radius: 20px;
+
 }
 
 .about-block img {
@@ -104,8 +161,16 @@ h3 {
     height: auto;
 }
 
+.co-description {
+    color: lightgray;
+}
+
+.admin-description {
+    color: lightgray;
+}
+
 .dashboard-items h1 {
-    color: white;
+    color: lightgray;
     font-size: 36px;
     width: 100%;
     border: solid black 4px;
@@ -144,12 +209,12 @@ h3 {
 .project {
     border: black solid 4px;
     background-color: black;
-    color: white;
+    color: lightgray;
     border-radius: 20px;
 }
 
 .project:hover {
-    border: white solid 4px;
+    border: lightgray solid 4px;
 }
 
 .project a {
@@ -157,12 +222,12 @@ h3 {
 }
 
 .project a:hover {
-    color:white;
+    color:lightgray;
 }
 
 .selected-project {
     background: #e86824;
-    color: white;
+    color: lightgray;
     border: black solid 4px;
     border-radius: 20px;
 }
@@ -194,7 +259,7 @@ background: black;
 }
 
 .uploaded-projects::-webkit-scrollbar-thumb {
-background: white;
+background: lightgray;
 }
 
 .uploaded-projects::-webkit-scrollbar-thumb:hover {
@@ -255,7 +320,7 @@ background: lightgray;
     width: 60%;
     border: black solid 4px;
     border-radius: 20px;
-    color: white;
+    color: lightgray;
     background-color: #e86824;
     max-height: 400px;
     overflow-y: scroll;
@@ -270,7 +335,7 @@ background: black;
 }
 
 .current-admins::-webkit-scrollbar-thumb {
-background: white;
+background: lightgray;
 }
 
 .current-admins::-webkit-scrollbar-thumb:hover {
@@ -286,7 +351,7 @@ background: lightgray;
 }
 
 .current-admins a:hover {
-    color:white
+    color:lightgray
 }
 
 .admin-user {
@@ -296,7 +361,7 @@ background: lightgray;
 }
 
 .admin-user:hover {
-    border: white solid 4px;
+    border: lightgray solid 4px;
 }
 
 .customer-list {
@@ -316,7 +381,7 @@ background: black;
 }
 
 .customer-list::-webkit-scrollbar-thumb {
-background: white;
+background: lightgray;
 }
 
 .customer-list::-webkit-scrollbar-thumb:hover {
@@ -326,7 +391,7 @@ background: lightgray;
 .customer {
     border: black solid 4px;
     background-color: black;
-    color: white;
+    color: lightgray;
     border-radius: 20px;
 }
 
@@ -335,17 +400,17 @@ background: lightgray;
 }
 
 .customer a:hover {
-    color:white;
+    color:lightgray;
 }
 
 .customer:hover {
-    border-color: white
+    border-color: lightgray
 }
 
 .selected-customer {
     height: 550px;
     background: #e86824;
-    color: white;
+    color: lightgray;
     border: black solid 4px;
     border-radius: 20px;
     display: flex;
@@ -365,7 +430,7 @@ background: lightgray;
 }
 
 .customer-display hr {
-    background-color: white;
+    background-color: lightgray;
 }
 
 .customer-display {
@@ -384,4 +449,58 @@ background: lightgray;
 .cost-input {
     border: black solid 4px;
     border-radius: 20px;
+}
+
+.view-invoice-block {
+    color: lightgray;
+    overflow-y: scroll;
+    max-height: 550px;
+    background-color: black;
+    border-radius: 20px;
+    border: black solid 4px;
+    width: 95%;
+}
+.view-invoice-block a {
+    color: lightgray;
+}
+
+.view-invoice-block a:hover {
+    color: #e86824;
+}
+
+.view-invoice-block::-webkit-scrollbar {
+    width: 4px;
+}
+
+.view-invoice-block::-webkit-scrollbar-track {
+background: black;
+}
+
+.view-invoice-block::-webkit-scrollbar-thumb {
+background: lightgray;
+}
+
+.view-invoice-block::-webkit-scrollbar-thumb:hover {
+background: lightgray;
+}
+
+.invoice-block {
+    border: solid black 4px;
+    border-radius: 20px;
+    background-color: #e86824;
+}
+
+.view-invoice-block:hover {
+    border: solid lightgray 4px;
+}
+
+.return-link a{
+    color: #e86824;
+    border: solid black 4px;
+    border-radius: 20px;
+    background-color: black;
+}
+
+.return-link a:hover {
+    color: lightgray;
 }

@@ -14,7 +14,7 @@
             <h1 class="text-center mx-auto p-2">RANDALL PAINTING</h1>
             <div class="nav-buttons w-100 navbar navbar-brand d-flex justify-content-around">
                 <h3><a href="/services">SERVICES WE OFFER</a></h3>
-                <h3><a href="/projects">OUR PROJECTS</a></h3>
+                <h3 class="page-highlight"><a href="/projects">OUR PROJECTS</a></h3>
                 <h3><a href="/about">ABOUT US</a></h3>
                 <h3><a href="/contact">CONTACT US</a></h3>
                 {% if request.session.user %}
@@ -22,19 +22,18 @@
                 {% endif %}
             </div>
         </div>
-        <h1 class="text-center m-5 font-weight-bold">OUR PROJECTS</h1>
-            <div class="project-wrapper">
-                <div class="uploaded-projects w-75 m-3 mx-auto">
-                    {% for project in projects %}
-                        {% if project.hidden != "True" %}
-                            <div class="project d-flex align-items-center p-2 m-2 justify-content-between">
-                                <img src="/media/{{ project.photo }}" alt="project1" class="m-2">
-                                <p class="m-2">{{ project.description }}</p>
-                            </div>
-                        {% endif %}
-                    {% endfor %}
-                </div>
+        <div class="project-wrapper">
+            <div class="uploaded-projects w-75 m-5 mx-auto">
+                {% for project in projects %}
+                    {% if project.hidden != "True" %}
+                        <div class="project d-flex align-items-center p-2 m-2 justify-content-between">
+                            <img src="/media/{{ project.photo }}" alt="project1" class="m-2">
+                            <p class="m-2">{{ project.description }}</p>
+                        </div>
+                    {% endif %}
+                {% endfor %}
             </div>
+        </div>
         <div class="bottom-nav d-flex justify-content-around m-5 mx-auto w-75">
             <h4><a href="/about">About Us</a></h4>
             <h4><a href="/contact">Contact Us</a></h4>

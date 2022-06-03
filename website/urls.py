@@ -10,7 +10,6 @@ urlpatterns = [
     path("services/", views.services),
     path("projects/", views.projects),
     path("about/", views.about),
-    path("contact/", views.contact),
     path("admin-login/", views.admin_login),
     path("dashboard/", views.dashboard),
     path("manage-projects/", views.manage_projects),
@@ -33,9 +32,16 @@ urlpatterns = [
     path("manage-single-admin/<id>", views.manage_single_admin),
     path("update-admin/<id>", views.update_admin),
     path("delete-admin/<id>", views.delete_admin),
-    path("login/", views.login),
+    path("login/", views.login_user),
     path("logout/", views.logout),
-    path("create-invoice/<id>", views.new_invoice)
+    path("create-invoice/<id>", views.new_invoice),
+    path("customer-invoices/<id>", views.customer_invoices),
+    path("generate-invoice/<id>", views.generate_invoice),
+    path("contact/", views.contact),
+    path("process-contact/", views.process_contact),
+    path("success/", views.contact_success),
+    path("generate-invoice/", views.generate_invoice)
+    # path("get-invoice/", views.)
 ]
 
 if settings.DEBUG:

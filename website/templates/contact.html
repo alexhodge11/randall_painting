@@ -16,39 +16,46 @@
                 <h3><a href="/services">SERVICES WE OFFER</a></h3>
                 <h3><a href="/projects">OUR PROJECTS</a></h3>
                 <h3><a href="/about">ABOUT US</a></h3>
-                <h3><a href="/contact">CONTACT US</a></h3>
+                <h3 class="page-highlight"><a href="/contact">CONTACT US</a></h3>
                 {% if request.session.user %}
                 <h3><a href="/logout">LOGOUT</a></h3>
                 {% endif %}
             </div>
         </div>
-        <h1 class="text-center m-5 font-weight-bold">CONTACT US</h1>
-        <div class="about-block d-flex w-75 text-center mx-auto align-items-center">
+        <h1 class="page-title text-center m-5 font-weight-bold">CONTACT US FOR A FREE ESTIMATE</h1>
+        <div class="about-block d-flex w-75 text-center mx-auto">
             <div class="email-form w-50 m-2 p-2">
-                <h5 class="text-center m-3 p-2">SUBMIT AN INQUIRY NOW FOR A FREE ESTIMATE!</h5>
-                <form action="" method="POST" class="mx-auto text-center">
-                    <div>
-                        <label for="name" class="text-center">Name:</label>
-                        <input class="form-group" type="text" name="first_name">
+                <h3 class="text-center m-3 p-2">SUBMIT YOUR INQUIRY NOW</h3>
+                <form action="/contact/" method="POST" class="mx-auto text-center ">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label class="contact-label text-center" for="name"><h4>Your Name</h4></label>
+                        <input class="form-control w-75 mx-auto text-center" type="text" name="name">
                     </div>
-                    <div>
-                        <label for="phone_number" class="text-center">Phone Number:</label>
-                        <input class="form-group" type="tel" name="phone_number">
+                    <div class="form-group">
+                        <label for="phone_number" class="contact-label text-center"><h4>Your Phone Number</h4></label>
+                        <input class="form-control w-75 mx-auto text-center" type="tel" name="phone_number">
                     </div>
-                    <div>
-                        <label for="email" class="text-center">Email Address:</label>
-                        <input class="form-group" type="text" name="email">
+                    <div class="form-group">
+                        <label for="email" class="contact-label text-center"><h4>Your Email Address</h4></label>
+                        <input class="form-control w-75 mx-auto text-center" type="text" name="email">
                     </div>
-                    <div>
-                        <label for="message" class="text-center">Brief Message:</label>
-                        <textarea class="form-group" type="textarea" name="message"></textarea>
+                    <div class="form-group">
+                        <label for="message" class="contact-label text-center"><h4>Leave a Brief Message</h4></label>
+                        <textarea class="form-control w-75 mx-auto text-center" type="textarea" name="message"></textarea>
                     </div>
-                    <input class="text-center" type="submit" value="Submit Inquiry">
+                    <input class="submit-button text-center m-3" type="submit" value="Submit Inquiry">
                 </form>
             </div>
-            <div class="admin-info w-50 m-2">
-                <h2>Admin Information</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vehicula sem non pharetra tincidunt. Morbi efficitur a odio vel sollicitudin. Nunc semper sem vel aliquam mollis. Maecenas ullamcorper neque et nibh vehicula, vel sagittis lectus egestas. Aliquam eleifend augue vel vestibulum egestas.</p>
+            <div class="admin-info w-50 m-2 p-2">
+                <h3 class="m-3 p-2 text-center">OR REACH OUT TO US BY PHONE OR EMAIL</h3>
+                <div class="admin-info-block mx-auto">
+                    <h3 class="admin-name text-center mx-auto align-middle">My name is Justin Stratton.</h3><br>
+                    <h4 class="admin-description">(716)907-1742<br>
+                        randallpainting88@gmail.com
+                    </h4><br><br><br><br>
+                    <h3 class="m-5 admin-description">We service the Buffalo and Niagara Falls area.</h3>
+                </div>
             </div>
         </div>
         <div class="bottom-nav d-flex justify-content-around m-5 mx-auto w-75">
